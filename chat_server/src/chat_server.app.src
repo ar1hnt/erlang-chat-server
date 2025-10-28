@@ -1,0 +1,10 @@
+{application, chat_server,
+ [
+  {description, "Чат-серврер на Erlang"},
+  {vsn, "1.0.0"},
+    {modules, [chat_app, chat_sup, listener, room_manager, client_sup, client_proc]},
+    {registered, [room_manager, listener, chat_sup]},
+    {applications, [kernel, stdlib]},
+    {mod, {chat_app, []}},
+  {env, []}
+ ]}.
